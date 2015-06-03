@@ -6,30 +6,30 @@ import javax.swing.JTextField;
 import javax.swing.JComboBox;
 
 public class VistaInicial extends JPanel {
+	private static final long serialVersionUID = 7618248448122231508L;
 	private JTextField textField;
 	private JTextField textField_1;
-	JComboBox comboBox;
+	String[] telefonos = {"687622552","967622552"};
+	JComboBox<String> comboBox = new JComboBox<String>(telefonos);
 	
-	String telefonos[]={"687622552","967622552"};
-
 	public VistaInicial() {
 		setLayout(null);
 		
-		//AÒadimos los numeros de telÈfono
+		//A√±adimos los numeros de tel√©fono
+		comboBox.addItem(telefonos[0]);
 		comboBox.addItem(telefonos[1]);
-		comboBox.addItem(telefonos[2]);
 		
 		JLabel lblNombre = new JLabel("Nombre");
-		lblNombre.setBounds(10, 11, 46, 14);
+		lblNombre.setBounds(10, 11, 100, 14);
 		add(lblNombre);
 		
 		textField = new JTextField();
+		textField.setColumns(10);
 		textField.setBounds(10, 36, 208, 20);
 		add(textField);
-		textField.setColumns(10);
 		
 		JLabel lblApellidos = new JLabel("Apellidos");
-		lblApellidos.setBounds(10, 71, 46, 14);
+		lblApellidos.setBounds(10, 71, 100, 14);
 		add(lblApellidos);
 		
 		textField_1 = new JTextField();
@@ -37,11 +37,11 @@ public class VistaInicial extends JPanel {
 		textField_1.setBounds(10, 96, 208, 20);
 		add(textField_1);
 		
-		JLabel lblNewLabel = new JLabel("Telefonos");
+		JLabel lblNewLabel = new JLabel("Tel√©fonos");
 		lblNewLabel.setBounds(10, 141, 93, 14);
 		add(lblNewLabel);
 		
-		comboBox = new JComboBox();
+		comboBox = new JComboBox<String>(telefonos);
 		comboBox.setBounds(10, 173, 208, 20);
 		add(comboBox);
 

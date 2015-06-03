@@ -1,8 +1,5 @@
 package Vistas;
 
-import java.awt.BorderLayout;
-import java.awt.EventQueue;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
@@ -10,9 +7,9 @@ import javax.swing.JMenuBar;
 import java.awt.CardLayout;
 
 public class VistaPrincipal extends JFrame {
-
+	private static final long serialVersionUID = 761824123682231508L;
 	private JPanel contentPane;
-	private VistaInicial vInicial=new VistaInicial();
+	private VistaInicial vInicial = new VistaInicial();
 
 	public VistaPrincipal() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
